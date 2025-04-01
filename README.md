@@ -5,7 +5,7 @@
 ## Exercicío 1
 ***OBJETIVO:** Utilizar semântica de linguagem de marcação conforme normas*
 ### Atividade 1 
-Crie uma página HTML com estrutura semântica usando <ins>\<header></ins>, <ins>\<nav></ins>, <ins>\<main></ins>, <ins>\<section></ins>, <ins>\<article></ins>, <ins>\<aside></ins> e <ins>\
+Crie uma página HTML com estrutura semântica usando <ins>\<header></ins>, <ins>\<nav></ins>, <ins>\<main></ins>, <ins>\<section></ins>, <ins>\<article></ins>, <ins>\<aside></ins> e <ins>\<footer></ins>.
 
 ### Atividade 2
 Converta um layout feito com <ins>\<div></ins> em um layout utilizando apenas elementos semânticos.
