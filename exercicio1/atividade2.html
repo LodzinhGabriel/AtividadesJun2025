@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout com divs</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .topo {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .menu {
+            background: #555;
+            padding: 10px;
+            text-align: center;
+        }
+        .conteudo {
+            display: flex;
+            margin-top: 20px;
+        }
+        .esquerda, .direita {
+            width: 25%;
+            padding: 20px;
+            background: #ddd;
+        }
+        .meio {
+            width: 50%;
+            padding: 20px;
+            background: #f4f4f4;
+        }
+        .rodape {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <header class="topo">Cabeçalho</header>
+        <nav class="menu">Menu de Navegação</nav>
+        <article class="conteudo">
+            <aside class="esquerda">Coluna Esquerda</aside>
+            <section class="meio">Conteúdo Principal</section>
+            <aside class="direita">Coluna Direita</aside>
+            <figure>
+                <img src="caminho/para/sua/imagem.jpg" alt="Descrição da imagem">
+                <figcaption>Esta é uma legenda descritiva para a imagem acima.</figcaption>
+            </figure>
+        </div>
+        <footer class="rodape">Rodapé</footer>
+    </main>
+</body>
+</html>
+

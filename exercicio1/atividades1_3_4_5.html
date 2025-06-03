@@ -1,0 +1,131 @@
+<!-- Atividade 1 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        p, h1, h2, a, figcaption {
+            font-family: 'Arial Narrow Bold', sans-serif
+        }
+
+        .cabecalho {
+            margin: 0;
+            background: grey;
+            width: 100%;
+            height: 50px;
+            display: flex;
+            padding: 10px;
+            position: relative;
+        }
+
+        .cabecalho h1 {
+            position: absolute;
+            transform: translate(-50%, 0);
+            left: 50%;
+            top: 25%;
+            margin: 0;
+            color: white;
+        }
+
+        .cabecalho a {
+            color: white;
+        }
+
+        .links {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 150px;
+        }
+
+        .rodape {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: gray;
+        }
+
+        .rodape h1 {
+            color: white;
+        }
+
+        .rodape .separador{
+            margin: 10px;
+            width: 2px;
+            height: 70px;
+            background: white;
+        }
+
+        article {
+            padding: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        section {
+            width: 60%;
+        }
+
+        aside {
+            background-color: grey;
+            border: 3px solid black;
+            width: 25%;
+            padding: 10px;
+        }
+
+        aside h1, aside p {
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <header class="cabecalho"> <!-- Atividade 5 -->
+        <nav class="links">
+            <a href="http://" target="_blank" rel="noopener noreferrer">Link1</a>
+            <a href="http://" target="_blank" rel="noopener noreferrer">Link2</a>
+            <a href="http://" target="_blank" rel="noopener noreferrer">Link3</a>
+        </nav>
+        <h1>Cabeçalho</h1>
+    </header>
+    <main>
+        <article> <!-- Atividade 4 -->
+            <section>
+                <h1>Lorem Ipsum</h1>
+                <p>Uma parte de um jornal de séculos atrás que é usado para testar textos em sites e depurar a identação e o estilo do texto</p>
+            </section>
+            <section>
+                <h2>Texto</h2>
+                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+            </section>
+
+            <aside>
+                <h1>Fato curioso</h1>
+                <p>Ao contrário da crença popular, o Lorem Ipsum não é simplesmente um texto aleatório. Ele tem raízes em uma obra da literatura latina clássica de 45 a.C., o que lhe confere mais de 2.000 anos de idade. Richard McClintock, professor de latim no Hampden-Sydney College, na Virgínia, pesquisou uma das palavras latinas mais obscuras, consectetur, em uma passagem do Lorem Ipsum e, examinando as citações da palavra na literatura clássica, descobriu a fonte inquestionável. O Lorem Ipsum vem das seções 1.10.32 e 1.10.33 de "De Finibus Bonorum et Malorum" (Os Extremos do Bem e do Mal), de Cícero, escrito em 45 a.C. Este livro é um tratado sobre a teoria da ética, muito popular durante o Renascimento. A primeira linha do Lorem Ipsum, "Lorem ipsum dolor sit amet...", vem de uma linha da seção 1.10.32.</p>
+            </aside>
+
+            <!-- Atividade 3 -->
+            <figure>
+                <img src="static/papel-carbonizado-papiro-um-manuscrito-velho-molde-exemplo-74100440.webp" width="180" alt="Descrição da imagem">
+                <figcaption>Esse é o papiro do lorem ipsum, da onde o texto de exemplo foi tirado.</figcaption>
+            </figure>
+        </article>
+
+       
+    </main>
+
+    <footer class="rodape">
+        <h1>Rodapé</h1>
+        <div class="separador"></div>
+        <h1>2025</h1>
+    </footer>
+</body>
+</html>
