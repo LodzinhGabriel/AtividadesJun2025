@@ -63,7 +63,6 @@
 
             try {
                 // Simulação de uma API de login fictícia
-                // Em um ambiente real, você faria uma requisição POST para um endpoint real.
                 const response = await fetch('https://reqres.in/api/login', {
                     method: 'POST',
                     headers: {
@@ -78,7 +77,6 @@
                 if (response.ok) { // Status 200-299
                     loginMessage.innerHTML = 'Login bem-sucedido! Token: ' + data.token;
                     loginMessage.classList.add('success');
-                    // Aqui você redirecionaria o usuário ou salvaria o token (e.g., em localStorage)
                     // window.location.href = '/dashboard';
                 } else {
                     loginMessage.innerHTML = 'Erro de login: ' + (data.error || 'Credenciais inválidas.');
