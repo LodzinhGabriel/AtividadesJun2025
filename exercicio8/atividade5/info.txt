@@ -1,0 +1,10 @@
+Atividade 5: Criação de Versão Acessível de um Formulário
+Vamos pegar o formulário de cadastro otimizado da Atividade 4 e adicionar elementos para suporte a leitores de tela e acessibilidade.
+
+Princípios de Acessibilidade:
+
+Semântica HTML Correta: Usar as tags HTML corretas (<label>, <input>, <button>, <fieldset>, <legend>).
+Atributos ARIA: Utilizar aria-label, aria-describedby, aria-required, role para fornecer informações adicionais a tecnologias assistivas.
+Contraste de Cores: Garantir que o texto e os elementos interativos tenham contraste suficiente com o fundo.
+Navegação por Teclado: Garantir que todos os elementos interativos sejam acessíveis e operáveis via teclado (usando tabindex).
+Feedback Audível e Visual: Fornecer feedback claro para validação e erros.

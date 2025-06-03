@@ -1,0 +1,94 @@
+Imagine um formulário de cadastro com os seguintes problemas:
+
+Todos os campos em uma linha única, sem agrupamento.
+Rótulos dos campos alinhados à direita, longe dos campos.
+Campos de senha sem opção de "mostrar senha".
+Mensagens de erro genéricas e que aparecem apenas após o envio.
+Botão de "Enviar" pequeno e mal localizado.
+Campos obrigatórios não indicados.
+Nenhuma indicação de progresso para formulários com várias etapas.
+
+Nome Completo: ___________ Email: __________ Senha: __________ Confirmar Senha: __________ Telefone: __________ Endereço: __________ Cidade: __________ Estado: __________ CEP: __________
+[ Botão Pequeno e Cinza - Enviar ]
+
+Redesign do Formulário (Melhorando a Experiência do Usuário)
+
+Objetivo do Redesign: Tornar o formulário mais claro, fácil de preencher, e menos propenso a erros, melhorando a usabilidade e a satisfação do usuário.
+
+Melhorias de UI e UX Aplicadas:
+
+Agrupamento e Organização Visual (UI/UX):
+
+Campos relacionados agrupados visualmente (ex: dados pessoais, endereço).
+Uso de espaçamento adequado entre os campos para melhorar a legibilidade.
+Rótulos de Campo e Placeholder (UI/UX):
+
+Rótulos acima dos campos, claros e concisos.
+Texto de placeholder para dar exemplos de formato esperado (ex: "nome@exemplo.com", "99999-9999").
+Indicação de Campos Obrigatórios (UI/UX):
+
+Uso de um asterisco * ao lado dos rótulos para indicar campos obrigatórios.
+Feedback em Tempo Real (UX):
+
+Validação de campo em tempo real (ex: marcar campo de e-mail como inválido se o formato estiver errado antes do envio).
+Mensagens de erro específicas e amigáveis, aparecendo próximo ao campo problemático.
+Segurança e Usabilidade da Senha (UI/UX):
+
+Opção de "mostrar senha" (ícone de olho) para que o usuário possa verificar o que digitou.
+Indicação de requisitos de senha (mínimo de caracteres, letras maiúsculas/minúsculas, números, símbolos) enquanto o usuário digita.
+Botão de Ação Clara (UI/UX):
+
+Botão de "Cadastrar" ou "Enviar" proeminente, com cor contrastante e texto claro.
+Campo de Telefone Formatado (UX):
+
+Máscara automática para o campo de telefone (ex: (XX) XXXXX-XXXX), facilitando a entrada.
+Listas Suspensa para Estado (UX):
+
+Usar um dropdown para "Estado" evita erros de digitação e padroniza a entrada.
+Exemplo de Redesign (Visualização Textual):
+
+FORMULÁRIO DE CADASTRO
+
+------------------------------------
+  Dados Pessoais
+------------------------------------
+Nome Completo *
+[ _________________________ ]
+Ex: João da Silva
+
+Email *
+[ _________________________ ]
+Ex: joao.silva@email.com
+
+Telefone
+[ (  ) _____-____ ]
+Ex: (11) 98765-4321
+
+------------------------------------
+  Sua Senha
+------------------------------------
+Senha *
+[ ••••••••••• ] [👁️] (Mostrar Senha)
+Requisitos: Mín. 8 caracteres, 1 maiúscula, 1 número.
+
+Confirmar Senha *
+[ ••••••••••• ]
+
+------------------------------------
+  Endereço
+------------------------------------
+CEP *
+[ _____-___ ]
+
+Endereço *
+[ _________________________________ ]
+
+Cidade *
+[ _________________________ ]
+
+Estado *
+[ ▼ Selecione o Estado...    ] (Dropdown)
+
+------------------------------------
+
+[ BOTÃO GRANDE E AZUL - CADASTRAR ]

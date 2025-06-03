@@ -1,0 +1,63 @@
+Atividade 4: Simulação de Fluxo de Cadastro Otimizado para Dispositivos Móveis
+Cenário: Cadastro de novo usuário em um aplicativo de e-commerce.
+
+Princípios de Otimização Móvel:
+
+Entrada Mínima: Pedir apenas o essencial no início.
+Teclados Adaptativos: Sugerir o tipo de teclado correto (numérico para telefone/CEP, e-mail para e-mail).
+Visualização Clara: Campos grandes e espaçados para evitar erros de toque.
+Progresso Visual: Indicar onde o usuário está no processo.
+Validação em Tempo Real: Feedback imediato sobre o preenchimento.
+Ações Simples: Botões de ação claros e grandes.
+Simulação do Fluxo:
+
+Tela 1: Boas-vindas e Opções de Início/Cadastro
+
+Título: "Bem-vindo ao [Nome do Aplicativo]"
+Opções:
+[ Botão Grande - "Entrar" ]
+[ Botão Grande e Colorido - "Criar Conta Grátis" ]
+[ Ícone Pequeno - "Entrar com Google" ]
+[ Ícone Pequeno - "Entrar com Facebook" ]
+UX Justificativa: Oferece opções claras para usuários existentes e novos, com destaque para a criação de conta. Inclui opções de login social para conveniência.
+Tela 2: Etapa 1 - Dados Básicos
+
+Título: "Crie Sua Conta (1 de 3)"
+Barra de Progresso: [------●---------]
+Campos:
+Email: [ ] (Teclado de e-mail)
+Validação: "E-mail inválido", "E-mail já cadastrado"
+Senha: [ ] (Teclado padrão, opção "Mostrar Senha")
+Requisitos: "Mín. 8 caracteres, 1 maiúscula, 1 número"
+Confirmar Senha: [ ] (Teclado padrão)
+Validação: "Senhas não conferem"
+Botão: [ Botão Grande - "Próximo" ] (Habilitado apenas após validação correta)
+UX Justificativa: Coleta os dados essenciais para o login, dividindo o processo em etapas gerenciáveis. Feedback em tempo real para senhas e e-mail. Barra de progresso reduz a ansiedade.
+Tela 3: Etapa 2 - Seus Dados Pessoais
+
+Título: "Seus Dados (2 de 3)"
+Barra de Progresso: [----------●-----]
+Campos:
+Nome Completo: [ ] (Teclado padrão)
+CPF (Opcional): [ ] (Teclado numérico, máscara automática XXX.XXX.XXX-XX)
+Data de Nascimento: [ ] (Seletor de data otimizado para celular, não digitação livre)
+Telefone: [ ] (Teclado numérico, máscara automática (XX) XXXXX-XXXX)
+Botão: [ Botão Grande - "Próximo" ]
+Link: "Pular esta etapa" (se os campos forem opcionais para o cadastro básico)
+UX Justificativa: Campos opcionais para reduzir a barreira de entrada. Máscaras e seletores de data facilitam o preenchimento.
+Tela 4: Etapa 3 - Endereço (Opcional ou para Primeira Compra)
+
+Título: "Seu Endereço (3 de 3)"
+Barra de Progresso: [------------●---]
+Campos:
+CEP: [ ] (Teclado numérico, máscara automática XXXXX-XXX)
+Auto-preenchimento de Endereço, Cidade, Estado ao digitar CEP válido
+Número: [ ] (Teclado numérico)
+Complemento (Opcional): [ ]
+Botão: [ Botão Grande e Colorido - "Finalizar Cadastro" ]
+UX Justificativa: Otimização para CEP com auto-preenchimento, minimizando a digitação. Oferece opção de preencher o endereço mais tarde se não for estritamente necessário para o cadastro inicial.
+Tela de Confirmação/Sucesso:
+
+Mensagem: "Cadastro Concluído! Bem-vindo(a) ao [Nome do Aplicativo]!"
+Botão: [ Botão Grande - "Começar a Comprar" ]
+UX Justificativa: Feedback claro de sucesso e CTA para a próxima ação.

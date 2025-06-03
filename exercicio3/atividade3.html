@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidades Relativas</title>
+    <style>
+        /* Definindo o tamanho da fonte base no elemento raiz (para rem) */
+        html {
+            font-size: 16px; /* 1rem = 16px por padrão */
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 2rem; /* 2rem = 32px de padding */
+            background-color: #f0f8ff;
+        }
+
+        .header {
+            background-color: #28a745;
+            color: white;
+            padding: 1.5rem; /* Padding relativo à fonte raiz */
+            text-align: center;
+            font-size: 1.25rem; /* Tamanho da fonte relativo à fonte raiz */
+            margin-bottom: 2rem;
+        }
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem; /* Espaçamento relativo à fonte raiz */
+        }
+
+        .card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 1em; /* Padding relativo à fonte do próprio .card */
+            box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.1); /* Sombras relativas à fonte do card */
+            flex: 1 1 30%; /* flex-grow, flex-shrink, flex-basis: 30% da largura do pai */
+            box-sizing: border-box; /* Garante que padding e border sejam incluídos na largura */
+            min-width: 250px; /* Largura mínima em pixels para evitar que fique muito pequeno */
+        }
+
+        .card h3 {
+            font-size: 1.3em; /* Tamanho da fonte relativo à fonte do .card */
+            margin-top: 0;
+            margin-bottom: 0.5em;
+            color: #007bff;
+        }
+
+        .card p {
+            font-size: 0.95em; /* Tamanho da fonte relativo à fonte do .card */
+            line-height: 1.6;
+        }
+
+        /* Exemplo de uso de % para largura em uma media query */
+        @media (max-width: 768px) {
+            .card {
+                flex: 1 1 45%; /* Em telas menores, 2 cards por linha */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                flex: 1 1 100%; /* Em telas muito pequenas, 1 card por linha */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Meu Título Responsivo</h1>
+    </div>
+
+    <div class="content">
+        <div class="card">
+            <h3>Card 1</h3>
+            <p>Este é um parágrafo de exemplo. O tamanho da fonte e o espaçamento aqui são definidos usando unidades relativas como 'em'.</p>
+        </div>
+        <div class="card">
+            <h3>Card 2</h3>
+            <p>O padding deste card é '1em', o que significa que ele se baseia no tamanho da fonte do próprio card.</p>
+        </div>
+        <div class="card">
+            <h3>Card 3</h3>
+            <p>O tamanho da fonte do título no cabeçalho é '1.25rem', relativo ao tamanho da fonte do HTML.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testando Meta Viewport</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #e0f7fa;
+            line-height: 1.6;
+        }
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        img {
+            max-width: 100%; /* Garante que a imagem se adapte à largura do seu contêiner */
+            height: auto;
+            display: block;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Entendendo o Meta Viewport</h1>
+        <p>Esta página demonstra a importância da tag <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code>.</p>
+        <img src="https://via.placeholder.com/600x300/ADD8E6/000000?text=Imagem+de+Exemplo" alt="Imagem de Exemplo">
+        <p><strong>Com a tag meta viewport:</strong> O navegador renderizará a página de forma responsiva, ajustando o layout para a largura do dispositivo e aplicando o zoom inicial de 100%. O texto e as imagens se adaptarão bem.</p>
+        <p><strong>Sem a tag meta viewport:</strong> Em dispositivos móveis, o navegador tentará renderizar a página como se estivesse em um desktop, resultando em um layout muito pequeno e zoom out. Você precisará dar "pinch-to-zoom" para ler o conteúdo.</p>
+        <p>Experimente comentar a linha do <code>&lt;meta name="viewport"&gt;</code> no <code>&lt;head&gt;</code> e recarregar a página em um dispositivo móvel ou no modo de inspeção do navegador com a emulação de dispositivo.</p>
+    </div>
+</body>
+</html>

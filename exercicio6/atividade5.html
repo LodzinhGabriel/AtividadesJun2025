@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Responsivo com Bootstrap Grid</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        .grid-item {
+            background-color: #e0f7fa;
+            border: 1px solid #b2ebf2;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 15px; /* Espaçamento entre as colunas */
+        }
+    </style>
+</head>
+<body>
+    <div class="container my-5">
+        <h1 class="text-center mb-4">Layout Responsivo com Bootstrap Grid</h1>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="grid-item">
+                    <h3>Coluna 1</h3>
+                    <p>Conteúdo da primeira coluna. Em telas pequenas, esta coluna ocupará a largura total.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="grid-item">
+                    <h3>Coluna 2</h3>
+                    <p>Conteúdo da segunda coluna. Em telas médias e maiores, as duas colunas dividirão o espaço.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="grid-item">
+                    <h3>Item A</h3>
+                    <p>Este item se adapta a diferentes tamanhos de tela. Experimente redimensionar a janela.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="grid-item">
+                    <h3>Item B</h3>
+                    <p>Em telas grandes (lg), teremos 3 colunas. Em telas médias (md), 2 colunas. Em pequenas (sm), 1 coluna.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12 col-sm-12">
+                <div class="grid-item">
+                    <h3>Item C</h3>
+                    <p>A flexibilidade do grid permite criar layouts complexos e responsivos de forma eficiente.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row align-items-center mt-5">
+            <div class="col-md-4">
+                <div class="grid-item bg-info">
+                    <h3>Item Alinhado</h3>
+                    <p>Este item é um pouco mais alto.</p>
+                    <p>Conteúdo extra aqui.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="grid-item">
+                    <h3>Item Menor</h3>
+                    <p>Conteúdo.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="grid-item bg-warning">
+                    <h3>Outro Item Alinhado</h3>
+                    <p>Ele se alinha ao centro dos outros itens na linha.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

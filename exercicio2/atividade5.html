@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Pesquisa Estilizado</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+        .search-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+        }
+        h2 {
+            color: #333;
+            margin-bottom: 25px;
+        }
+        .search-form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px; /* Space between input and button */
+        }
+        input[type="search"] {
+            flex-grow: 1; /* Allows the input to take available space */
+            padding: 12px;
+            border: 2px solid #007bff;
+            border-radius: 25px; /* Rounded corners for search input */
+            font-size: 16px;
+            outline: none; /* Remove default outline on focus */
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        input[type="search"]:focus {
+            border-color: #0056b3;
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+        }
+        button[type="submit"] {
+            padding: 12px 25px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 25px; /* Rounded corners for button */
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px); /* Slight lift on hover */
+        }
+        button[type="submit"] svg {
+            margin-right: 8px;
+        }
+
+        /* Basic responsiveness */
+        @media (max-width: 600px) {
+            .search-form {
+                flex-direction: column; /* Stack input and button vertically */
+                gap: 15px;
+            }
+            input[type="search"],
+            button[type="submit"] {
+                width: 100%;
+                box-sizing: border-box;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="search-container">
+        <h2>O que você está procurando?</h2>
+        <form action="#" method="GET" class="search-form">
+            <input type="search" id="search-input" name="q" placeholder="Pesquisar..." required>
+            <button type="submit">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.088.125l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.125-.088zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                </svg>
+                Pesquisar
+            </button>
+        </form>
+    </div>
+</body>
+</html>

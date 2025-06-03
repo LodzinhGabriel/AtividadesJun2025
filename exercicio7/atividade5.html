@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 5: Previsão do Tempo</title>
+    <style>
+        body { font-family: sans-serif; margin: 20px; text-align: center; }
+        #weather-container { 
+            margin-top: 30px; 
+            padding: 20px; 
+            border: 1px solid #ccc; 
+            border-radius: 8px; 
+            max-width: 500px; 
+            margin-left: auto; 
+            margin-right: auto; 
+            box-shadow: 0 0 10px rgba(0,0,0,0.1); 
+        }
+        .weather-info h2 { margin-bottom: 5px; }
+        .weather-info p { margin: 5px 0; }
+    </style>
+</head>
+<body>
+    <h1>Previsão do Tempo</h1>
+    <button id="getWeatherButton">Obter Previsão do Tempo</button>
+    <div id="weather-container">
+        <p>Clique no botão para obter a previsão do tempo da sua localização.</p>
+    </div>
+
+    <script>
+        document.getElementById('getWeatherButton').addEventListener('click', getWeather);
+
+        async function getWeather() {
+            const weatherContainer = document.getElementById('weather-container');
+            weatherContainer.innerHTML = '<p>Obtendo sua localização...</p>';
+
+            if (!navigator.geolocation) {
+                weatherContainer.innerHTML = '<p style="color: red;">Geolocalização não é suportada pelo seu navegador.</p>';
+                return;
+            }
+
+            navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+
+            async function successCallback(position) {
+                const latitude = position.coords.latitude;
+                const longitude = position.coords.longitude;
+                weatherContainer.innerHTML = `<p>Localização obtida: Latitude ${latitude.toFixed(2)}, Longitude ${longitude.toFixed(2)}</p><p>Buscando previsão do tempo...</p>`;
+
+                try {
+                    // Usando Open-Meteo (não requer chave de API para uso básico)
+                    const weatherApiUrl = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true&hourly=temperature_2m,weathercode&timezone=auto`;
+
+                    const response = await fetch(weatherApiUrl);
+                    if (!response.ok) {
+                        throw new Error(`Erro HTTP! status: ${response.status}`);
+                    }
+                    const weatherData = await response.json();
+
+                    const currentWeather = weatherData.current_weather;
+                    
+                    if (currentWeather) {
+                        weatherContainer.innerHTML = `
+                            <div class="weather-info">
+                                <h2>Previsão do Tempo</h2>
+                                <p>Temperatura: ${currentWeather.temperature}°C</p>
+                                <p>Velocidade do Vento: ${currentWeather.windspeed} km/h</p>
+                                <p>Direção do Vento: ${currentWeather.winddirection}°</p>
+                                <p>Código do Tempo: ${currentWeather.weathercode} (${getWeatherDescription(currentWeather.weathercode)})</p>
+                                <p>Hora da Observação: ${new Date(currentWeather.time).toLocaleTimeString()}</p>
+                            </div>
+                        `;
+                    } else {
+                        weatherContainer.innerHTML = `<p>Não foi possível obter a previsão do tempo para esta localização.</p>`;
+                    }
+
+                } catch (error) {
+                    console.error('Erro ao buscar previsão do tempo:', error);
+                    weatherContainer.innerHTML = `<p style="color: red;">Erro ao carregar a previsão do tempo: ${error.message}</p>`;
+                }
+            }
+
+            function errorCallback(error) {
+                let errorMessage;
+                switch(error.code) {
+                    case error.PERMISSION_DENIED:
+                        errorMessage = "Usuário negou a solicitação de Geolocalização.";
+                        break;
+                    case error.POSITION_UNAVAILABLE:
+                        errorMessage = "Informação de localização indisponível.";
+                        break;
+                    case error.TIMEOUT:
+                        errorMessage = "A requisição para obter a localização excedeu o tempo limite.";
+                        break;
+                    case error.UNKNOWN_ERROR:
+                        errorMessage = "Um erro desconhecido ocorreu.";
+                        break;
+                }
+                weatherContainer.innerHTML = `<p style="color: red;">Erro ao obter localização: ${errorMessage}</p>`;
+                console.error('Erro de Geolocalização:', error);
+            }
+
+            // Função auxiliar para interpretar o weathercode do Open-Meteo (exemplo básico)
+            function getWeatherDescription(code) {
+                switch(code) {
+                    case 0: return "Céu limpo";
+                    case 1: case 2: case 3: return "Principalmente claro a parcialmente nublado";
+                    case 45: case 48: return "Nevoeiro";
+                    case 51: case 53: case 55: return "Garoa";
+                    case 61: case 63: case 65: return "Chuva";
+                    case 71: case 73: case 75: return "Queda de neve";
+                    case 80: case 81: case 82: return "Pancadas de chuva";
+                    case 95: return "Trovoada";
+                    case 96: case 99: return "Trovoada com granizo";
+                    default: return "Desconhecido";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

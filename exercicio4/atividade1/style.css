@@ -1,0 +1,14 @@
+#colorChangingButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff; /* Cor inicial */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transição suave */
+}
+
+#colorChangingButton.hovered {
+    background-color: #28a745; /* Cor ao passar o mouse */
+}
